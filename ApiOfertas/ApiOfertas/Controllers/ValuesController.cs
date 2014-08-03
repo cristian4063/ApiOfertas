@@ -10,7 +10,7 @@ namespace ApiOfertas.Controllers
 {
     public class ValuesController : ApiController
     {
-        anfesmo_db_LavanderiaEntities db = new anfesmo_db_LavanderiaEntities();
+        db_ofertas_empleoEntities db = new db_ofertas_empleoEntities();
 
         // GET api/values
         public IEnumerable<OfertasEmpleo> Get()

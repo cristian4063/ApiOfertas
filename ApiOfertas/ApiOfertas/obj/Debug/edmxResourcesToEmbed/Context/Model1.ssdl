@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="anfesmo_db_LavanderiaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+<Schema Namespace="db_ofertas_empleoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <!--Errores durante la generación:
-advertencia 6002: La tabla o vista 'anfesmo_db_Lavanderia.anfesmo_lavanderia.OfertasEmpleo' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+advertencia 6002: La tabla o vista 'db_ofertas_empleo.dbo.OfertasEmpleo' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
   <EntityType Name="OfertasEmpleo">
     <Key>
       <PropertyRef Name="Id" />
@@ -15,6 +15,7 @@ advertencia 6002: La tabla o vista 'anfesmo_db_Lavanderia.anfesmo_lavanderia.Ofe
       <PropertyRef Name="Salario" />
       <PropertyRef Name="Departamento" />
       <PropertyRef Name="Municipio" />
+      <PropertyRef Name="Direccion" />
       <PropertyRef Name="Estado" />
     </Key>
     <Property Name="Id" Type="bigint" Nullable="false" />
@@ -34,11 +35,12 @@ advertencia 6002: La tabla o vista 'anfesmo_db_Lavanderia.anfesmo_lavanderia.Ofe
     <Property Name="Sector" Type="nvarchar" MaxLength="128" />
     <Property Name="Latitud" Type="float" />
     <Property Name="Longitud" Type="float" />
+    <Property Name="Direccion" Type="nvarchar" MaxLength="256" Nullable="false" />
     <Property Name="Estado" Type="bit" Nullable="false" />
     <Property Name="NumeroNegativos" Type="int" />
   </EntityType>
-  <EntityContainer Name="anfesmo_db_LavanderiaModelStoreContainer">
-    <EntitySet Name="OfertasEmpleo" EntityType="Self.OfertasEmpleo" store:Type="Tables" store:Schema="anfesmo_lavanderia">
+  <EntityContainer Name="db_ofertas_empleoModelStoreContainer">
+    <EntitySet Name="OfertasEmpleo" EntityType="Self.OfertasEmpleo" store:Type="Tables" store:Schema="dbo">
       <DefiningQuery>SELECT 
 [OfertasEmpleo].[Id] AS [Id], 
 [OfertasEmpleo].[Empleador] AS [Empleador], 
@@ -57,9 +59,10 @@ advertencia 6002: La tabla o vista 'anfesmo_db_Lavanderia.anfesmo_lavanderia.Ofe
 [OfertasEmpleo].[Sector] AS [Sector], 
 [OfertasEmpleo].[Latitud] AS [Latitud], 
 [OfertasEmpleo].[Longitud] AS [Longitud], 
+[OfertasEmpleo].[Direccion] AS [Direccion], 
 [OfertasEmpleo].[Estado] AS [Estado], 
 [OfertasEmpleo].[NumeroNegativos] AS [NumeroNegativos]
-FROM [anfesmo_lavanderia].[OfertasEmpleo] AS [OfertasEmpleo]</DefiningQuery>
+FROM [dbo].[OfertasEmpleo] AS [OfertasEmpleo]</DefiningQuery>
     </EntitySet>
   </EntityContainer>
 </Schema>

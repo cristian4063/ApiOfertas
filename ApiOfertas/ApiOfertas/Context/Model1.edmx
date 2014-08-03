@@ -4,9 +4,9 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="anfesmo_db_LavanderiaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="db_ofertas_empleoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <!--Errores durante la generación:
-advertencia 6002: La tabla o vista 'anfesmo_db_Lavanderia.anfesmo_lavanderia.OfertasEmpleo' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+advertencia 6002: La tabla o vista 'db_ofertas_empleo.dbo.OfertasEmpleo' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
         <EntityType Name="OfertasEmpleo">
           <Key>
             <PropertyRef Name="Id" />
@@ -20,6 +20,7 @@ advertencia 6002: La tabla o vista 'anfesmo_db_Lavanderia.anfesmo_lavanderia.Ofe
             <PropertyRef Name="Salario" />
             <PropertyRef Name="Departamento" />
             <PropertyRef Name="Municipio" />
+            <PropertyRef Name="Direccion" />
             <PropertyRef Name="Estado" />
           </Key>
           <Property Name="Id" Type="bigint" Nullable="false" />
@@ -39,11 +40,12 @@ advertencia 6002: La tabla o vista 'anfesmo_db_Lavanderia.anfesmo_lavanderia.Ofe
           <Property Name="Sector" Type="nvarchar" MaxLength="128" />
           <Property Name="Latitud" Type="float" />
           <Property Name="Longitud" Type="float" />
+          <Property Name="Direccion" Type="nvarchar" MaxLength="256" Nullable="false" />
           <Property Name="Estado" Type="bit" Nullable="false" />
           <Property Name="NumeroNegativos" Type="int" />
         </EntityType>
-        <EntityContainer Name="anfesmo_db_LavanderiaModelStoreContainer">
-          <EntitySet Name="OfertasEmpleo" EntityType="Self.OfertasEmpleo" store:Type="Tables" store:Schema="anfesmo_lavanderia">
+        <EntityContainer Name="db_ofertas_empleoModelStoreContainer">
+          <EntitySet Name="OfertasEmpleo" EntityType="Self.OfertasEmpleo" store:Type="Tables" store:Schema="dbo">
             <DefiningQuery>SELECT 
 [OfertasEmpleo].[Id] AS [Id], 
 [OfertasEmpleo].[Empleador] AS [Empleador], 
@@ -62,16 +64,17 @@ advertencia 6002: La tabla o vista 'anfesmo_db_Lavanderia.anfesmo_lavanderia.Ofe
 [OfertasEmpleo].[Sector] AS [Sector], 
 [OfertasEmpleo].[Latitud] AS [Latitud], 
 [OfertasEmpleo].[Longitud] AS [Longitud], 
+[OfertasEmpleo].[Direccion] AS [Direccion], 
 [OfertasEmpleo].[Estado] AS [Estado], 
 [OfertasEmpleo].[NumeroNegativos] AS [NumeroNegativos]
-FROM [anfesmo_lavanderia].[OfertasEmpleo] AS [OfertasEmpleo]</DefiningQuery>
+FROM [dbo].[OfertasEmpleo] AS [OfertasEmpleo]</DefiningQuery>
           </EntitySet>
         </EntityContainer>
       </Schema>
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="anfesmo_db_LavanderiaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="db_ofertas_empleoModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="OfertasEmpleo">
           <Key>
             <PropertyRef Name="Id" />
@@ -85,6 +88,7 @@ FROM [anfesmo_lavanderia].[OfertasEmpleo] AS [OfertasEmpleo]</DefiningQuery>
             <PropertyRef Name="Salario" />
             <PropertyRef Name="Departamento" />
             <PropertyRef Name="Municipio" />
+            <PropertyRef Name="Direccion" />
             <PropertyRef Name="Estado" />
           </Key>
           <Property Name="Id" Type="Int64" Nullable="false" />
@@ -104,10 +108,11 @@ FROM [anfesmo_lavanderia].[OfertasEmpleo] AS [OfertasEmpleo]</DefiningQuery>
           <Property Name="Sector" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
           <Property Name="Latitud" Type="Double" />
           <Property Name="Longitud" Type="Double" />
+          <Property Name="Direccion" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Estado" Type="Boolean" Nullable="false" />
           <Property Name="NumeroNegativos" Type="Int32" />
         </EntityType>
-        <EntityContainer Name="anfesmo_db_LavanderiaEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="db_ofertas_empleoEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="OfertasEmpleos" EntityType="Self.OfertasEmpleo" />
         </EntityContainer>
       </Schema>
@@ -115,9 +120,9 @@ FROM [anfesmo_lavanderia].[OfertasEmpleo] AS [OfertasEmpleo]</DefiningQuery>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="anfesmo_db_LavanderiaModelStoreContainer" CdmEntityContainer="anfesmo_db_LavanderiaEntities">
+        <EntityContainerMapping StorageEntityContainer="db_ofertas_empleoModelStoreContainer" CdmEntityContainer="db_ofertas_empleoEntities">
           <EntitySetMapping Name="OfertasEmpleos">
-            <EntityTypeMapping TypeName="anfesmo_db_LavanderiaModel.OfertasEmpleo">
+            <EntityTypeMapping TypeName="db_ofertas_empleoModel.OfertasEmpleo">
               <MappingFragment StoreEntitySet="OfertasEmpleo">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Empleador" ColumnName="Empleador" />
@@ -136,6 +141,7 @@ FROM [anfesmo_lavanderia].[OfertasEmpleo] AS [OfertasEmpleo]</DefiningQuery>
                 <ScalarProperty Name="Sector" ColumnName="Sector" />
                 <ScalarProperty Name="Latitud" ColumnName="Latitud" />
                 <ScalarProperty Name="Longitud" ColumnName="Longitud" />
+                <ScalarProperty Name="Direccion" ColumnName="Direccion" />
                 <ScalarProperty Name="Estado" ColumnName="Estado" />
                 <ScalarProperty Name="NumeroNegativos" ColumnName="NumeroNegativos" />
               </MappingFragment>

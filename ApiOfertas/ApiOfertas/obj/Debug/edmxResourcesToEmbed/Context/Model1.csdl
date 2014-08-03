@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="anfesmo_db_LavanderiaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+<Schema Namespace="db_ofertas_empleoModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
   <EntityType Name="OfertasEmpleo">
     <Key>
       <PropertyRef Name="Id" />
@@ -13,6 +13,7 @@
       <PropertyRef Name="Salario" />
       <PropertyRef Name="Departamento" />
       <PropertyRef Name="Municipio" />
+      <PropertyRef Name="Direccion" />
       <PropertyRef Name="Estado" />
     </Key>
     <Property Name="Id" Type="Int64" Nullable="false" />
@@ -32,10 +33,11 @@
     <Property Name="Sector" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
     <Property Name="Latitud" Type="Double" />
     <Property Name="Longitud" Type="Double" />
+    <Property Name="Direccion" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="Estado" Type="Boolean" Nullable="false" />
     <Property Name="NumeroNegativos" Type="Int32" />
   </EntityType>
-  <EntityContainer Name="anfesmo_db_LavanderiaEntities" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="db_ofertas_empleoEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="OfertasEmpleos" EntityType="Self.OfertasEmpleo" />
   </EntityContainer>
 </Schema>

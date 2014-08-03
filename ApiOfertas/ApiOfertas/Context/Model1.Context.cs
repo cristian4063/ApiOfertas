@@ -13,10 +13,10 @@ namespace ApiOfertas.Context
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class anfesmo_db_LavanderiaEntities : DbContext
+    public partial class db_ofertas_empleoEntities : DbContext
     {
-        public anfesmo_db_LavanderiaEntities()
-            : base("name=anfesmo_db_LavanderiaEntities")
+        public db_ofertas_empleoEntities()
+            : base("name=db_ofertas_empleoEntities")
         {
         }
     

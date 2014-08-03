@@ -31,6 +31,7 @@ namespace ApiOfertas.Context
         public string Sector { get; set; }
         public Nullable<double> Latitud { get; set; }
         public Nullable<double> Longitud { get; set; }
+        public string Direccion { get; set; }
         public bool Estado { get; set; }
         public Nullable<int> NumeroNegativos { get; set; }
     }

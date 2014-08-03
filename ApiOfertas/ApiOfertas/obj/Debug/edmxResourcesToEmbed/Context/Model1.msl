@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="anfesmo_db_LavanderiaModelStoreContainer" CdmEntityContainer="anfesmo_db_LavanderiaEntities">
+  <EntityContainerMapping StorageEntityContainer="db_ofertas_empleoModelStoreContainer" CdmEntityContainer="db_ofertas_empleoEntities">
     <EntitySetMapping Name="OfertasEmpleos">
-      <EntityTypeMapping TypeName="anfesmo_db_LavanderiaModel.OfertasEmpleo">
+      <EntityTypeMapping TypeName="db_ofertas_empleoModel.OfertasEmpleo">
         <MappingFragment StoreEntitySet="OfertasEmpleo">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Empleador" ColumnName="Empleador" />
@@ -21,6 +21,7 @@
           <ScalarProperty Name="Sector" ColumnName="Sector" />
           <ScalarProperty Name="Latitud" ColumnName="Latitud" />
           <ScalarProperty Name="Longitud" ColumnName="Longitud" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
           <ScalarProperty Name="Estado" ColumnName="Estado" />
           <ScalarProperty Name="NumeroNegativos" ColumnName="NumeroNegativos" />
         </MappingFragment>
