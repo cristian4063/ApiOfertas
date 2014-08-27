@@ -1,0 +1,260 @@
+﻿<div class="main-slider">
+    <!-- start main-headline section -->
+    <div class="slider-nav">
+        <a class="slider-prev"><i class="fa fa-chevron-circle-left"></i></a>
+        <a class="slider-next"><i class="fa fa-chevron-circle-right"></i></a>
+    </div>
+    <div id="home-slider" class="owl-carousel owl-theme">
+        <div class="item-slide">
+            <img src="images/upload/dummy-slide-1.jpg" class="img-responsive" alt="dummy-slide" />
+        </div>
+        <div class="item-slide">
+            <img src="images/upload/dummy-slide-2.jpg" class="img-responsive" alt="dummy-slide" />
+        </div>
+    </div>
+</div><!-- end main-headline section -->
+
+
+<div class="headline container">
+    <!-- start headline section -->
+    <div class="row">
+        <div class="col-md-6 align-right">
+            <h4>Encuentra empleo de forma fácil</h4>
+            <p>Explora entre todas nuestras ofertas y descubre el empleo que deseas</p>
+            <p><a href="" class="btn btn-default btn-yellow">Encontrar Empleo</a></p>
+        </div>
+        <div class="col-md-6 align-left">
+            <h4>Contrata gente talentosa</h4>
+            <p>Publica ofertas de empleo y descubre como los mejores perfiles llegan </p>
+            <p><a href="@Url.Action("Publicar", "Empleo")" class="btn btn-default btn-light">Publicar Empleo</a></p>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div><!-- end headline section -->
+
+<div class="job-finder">
+    <!-- start job finder -->
+    <div class="container">
+        <h3>Encontrar Empleo</h3>
+        <form>
+            <div class="col-md-12 form-group group-1">
+                <label for="searchjob" class="label">Buscar</label>
+                <input type="text" id="searchjob" class="input-job" placeholder="Ej. (Ingeniería, Conducción...)">
+            </div>
+            <br />
+            <div class="form-group">
+                <label for="salary" class="label clearfix">Departamento</label>
+                <select class="form-control">
+                    <option value="">Seleccione</option>
+                    <option value="">Antioquia</option>
+                    <option value="">Caldas</option>
+                </select>
+                <div class="clearfix"></div>
+            </div>
+            <div class="clearfix"></div>
+            <br />
+            <div class="form-group">
+                <label for="salary" class="label clearfix">Municipio</label>
+                <select class="form-control">
+                    <option value="">Manizales</option>
+                </select>
+                <div class="clearfix"></div>
+            </div>
+            <br />
+            <div class="form-group">
+                <label for="salary" class="label clearfix">Nivel Educativo</label>
+                <select class="form-control">
+                    <option value="">Básica Primaria (1 - 5)</option>
+                    <option value="">Básica Secundaria (6 - 9)</option>
+                </select>
+                <div class="clearfix"></div>
+            </div>
+            <br />
+            <div class="form-group">
+                <label for="salary" class="label clearfix">Sector Empresarial</label>
+                <select class="form-control">
+                    <option value="">Ganadería</option>
+                    <option value="">Ingeniería</option>
+                </select>
+                <div class="clearfix"></div>
+            </div>
+            <button type="button" class="btn btn-default btn-green">Buscar</button>
+        </form>
+    </div>
+</div><!-- end job finder -->
+<div class="recent-job">
+    <!-- Start Recent Job -->
+    <div class="container">
+        <h4><i class="glyphicon glyphicon-briefcase"></i> EMPLEOS ENCONTRADOS</h4>
+        <div id="tab-container" class='tab-container'>
+            <!-- Start Tabs -->
+            <ul class='etabs clearfix'>
+                <li class='tab'><a href="#all">Todos</a></li>
+            </ul>
+
+            <div class='panel-container'>
+                <div id="all">
+                    <!-- Tabs section 1 -->
+                    <div class="recent-job-list">
+                        <!-- Tabs content -->
+
+                        <div class="col-md-6 job-list-desc">
+                            <h6>Analista digital email marketing</h6>
+                            <p>Formación: Economista, estadistico, ingeniero industrial, mercadeo, y áreas afines para dirigir importante campaña</p>
+                        </div>
+                        <div class="col-md-3 job-list-location">
+                            <h6><i class="fa fa-map-marker"></i>Manizales, Colombia</h6>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="row">
+                                <div class="col-md-7 job-list-type">
+                                    <h6><i class="fa fa-calendar"> </i>25/09/2014</h6>
+                                </div>
+                                <div class="col-md-5 job-list-button">
+                                    <button class="btn-view-job" onclick="jobDetail()">Ver Oferta</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div><!-- Tabs content -->
+
+                    <div class="recent-job-list">
+                        <!-- Tabs content -->
+                        <div class="col-md-6 job-list-desc">
+                            <h6>Docente bilingüe</h6>
+                            <p>Docente profesional bilingüe (hombre o mujer) Experiencia mínima de 1 año comprobable</p>
+                        </div>
+
+                        <div class="col-md-3 job-list-location">
+                            <h6><i class="fa fa-map-marker"></i>Tolima, Colombia</h6>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="row">
+                                <div class="col-md-7 job-list-type">
+                                    <h6><i class="fa fa-calendar"></i>25/09/2014</h6>
+                                </div>
+                                <div class="col-md-5 job-list-button">
+                                    <button class="btn-view-job">Ver Oferta</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div><!-- Tabs content -->
+
+                    <div class="recent-job-list">
+                        <!-- Tabs content -->
+                        <div class="col-md-6 job-list-desc">
+                            <h6>Estudiantes ingeniería de sistemas</h6>
+                            <p>Estudiantes de últimos semestres, recién graduados o en proceso de grado</p>
+                        </div>
+                        <div class="col-md-3 job-list-location">
+                            <h6><i class="fa fa-map-marker"></i>Manizales, Colombia</h6>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="row">
+                                <div class="col-md-7 job-list-type">
+                                    <h6><i class="fa fa-calendar"></i> 25/09/2014</h6>
+                                </div>
+                                <div class="col-md-5 job-list-button">
+                                    <button class="btn-view-job">Ver Oferta</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div><!-- Tabs content -->
+                    <div class="recent-job-list">
+                        <!-- Tabs content -->
+                        <div class="col-md-6 job-list-desc">
+                            <h6>Ingeniero - tecnológo instrumentación</h6>
+                            <p>Habilidades técnico, tecnólogo experiencia 1 año</p>
+                        </div>
+                        <div class="col-md-3 job-list-location">
+                            <h6><i class="fa fa-map-marker"></i>Bogotá, Colombia</h6>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="row">
+                                <div class="col-md-7 job-list-type">
+                                    <h6><i class="fa fa-calendar"></i> 25/09/2014</h6>
+                                </div>
+                                <div class="col-md-5 job-list-button">
+                                    <button class="btn-view-job">Ver Oferta</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div><!-- Tabs content -->
+
+                    <div class="recent-job-list">
+                        <!-- Tabs content -->
+                        <div class="col-md-6 job-list-desc">
+                            <h6>Ingeniero civil</h6>
+                            <p>Importante empresa del Sector Financiero requiere INGENIEROS CIVILES con maestría en suelos </p>
+                        </div>
+                        <div class="col-md-3 job-list-location">
+                            <h6><i class="fa fa-map-marker"></i>Cali, Colombia</h6>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="row">
+                                <div class="col-md-7 job-list-type">
+                                    <h6><i class="fa fa-calendar"></i>25/09/2014</h6>
+                                </div>
+                                <div class="col-md-5 job-list-button">
+                                    <button class="btn-view-job">Ver Oferta</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div><!-- Tabs content -->
+                </div><!-- Tabs section 1 -->
+                <div id="contract">
+                    <!-- Tabs section 2 -->
+                </div><!-- Tabs section 2 -->
+            </div>
+        </div><!-- end Tabs -->
+    </div>
+</div><!-- end Recent Job -->
+<div class="job-status">
+    <div class="container">
+        <h1>Estadísticas de Empleos</h1>
+        <p>
+            Estamos comprometidos con ayudar a las personas a encontrar el empleo que buscan, por eso día a día crecemos y mejoramos
+        </p>
+
+        <div class="counter clearfix">
+            <div class="counter-container">
+                <div class="counter-value">125</div>
+                <div class="line"></div>
+                <p>Ofertas</p>
+            </div>
+
+
+            <div class="counter-container">
+                <div class="counter-value"> + 20</div>
+                <div class="line"></div>
+                <p>Ciudades</p>
+            </div>
+
+            <div class="counter-container">
+                <div class="counter-value">30</div>
+                <div class="line"></div>
+                <p>Empleos Diarios</p>
+            </div>
+
+            <div class="counter-container">
+                <div class="counter-value">100</div>
+                <div class="line"></div>
+                <p>Usuarios</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+@section scripts {
+    <script type="text/javascript">
+        function jobDetail()
+        {
+            document.location.href = "/Empleo/Detalle"
+        }
+    </script>
+}
